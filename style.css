@@ -1,0 +1,234 @@
+
+/* theme: defaults */
+:root {
+	--background:#000000;
+	--color:#eee;
+
+	--link-bg:#b16a4e3c;
+	--link-bg-hover:#0007;
+	--link-bg-shadow:inset 0 0 0 2px #000a;
+	--link-bg-shadow-hover:inset 0 0 3px #0af;
+	--link-parent-hover:linear-gradient(to right, #0000, #fff9 1px, #d0ffe045 3px, #ffffff11, #0000);
+
+	--link-color:#eee;
+	--link-color-hover:#fff;
+
+	--search-bg:linear-gradient(to top,#b16a4e3c, #0000003c);
+	--search-shadow:0 0 1px #4EB14E;
+
+	--search-focus: #b16a4e3c;
+	--search-focus-shadow:inset 0 0 0 50% #56B14E7c;
+
+	--search-color: #b16a4e;
+}
+
+/* theme: green_grund */
+html.green_grund:root {
+	--background: #000000 url("./img/background_green.jpg");
+	/*--color:;*/
+
+	--link-bg:#56B14E2c;
+	--link-bg-hover:#0007;
+	--link-bg-shadow:inset 0 0 0 2px #000a;
+	--link-bg-shadow-hover:inset 0 0 3px #0af;
+	--link-parent-hover:linear-gradient(to right, #0000, #fff9 1px, #d0ffe045 3px, #ffffff11, #0000);
+
+	--link-color:#eee;
+	--link-color-hover:#fff;
+
+	--search-bg:linear-gradient(to top, #56B14E3c, #0000003c);
+	--search-shadow:0 0 1px #4EB14E;
+	--search-focus-bg: #fff2;
+	--search-focus-shadow:inset 0 0 0 50% #56B14E7c;
+	--search-color: #56B14E;
+}
+
+/* end of themes */
+
+* {box-sizing: inherit; }
+html {box-sizing: border-box;}
+
+html {
+	background: var(--background);
+	background-attachment: fixed;
+	background-position: top center;
+	background-size: cover;
+	padding:0;margin:0;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: .7rem;
+	text-shadow: 1px 1px 0 black;
+	color: var(--color);
+	overflow-y: scroll;
+	margin:0;padding:7px;
+	min-height:100vh;
+
+	display:flex;
+	align-items:center;
+}
+
+pre {
+	border:1px solid #fff1;
+	margin:.3em;
+	padding:.3em;
+}
+
+a {
+	color:#0af;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#0f0;
+	background:#040;
+}
+
+.wrapper {
+	margin:auto;
+	width:1260px;
+	display:grid;
+	grid-template-columns:auto 180px;
+	gap:2em;
+}
+
+#linklist {
+	width:1000px;
+	margin-right:10px;
+	overflow:auto;
+}
+
+.groupsWrapper {
+	display:flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+	max-height:90vh;
+	gap:8px;
+}
+
+.groupsWrapper::after {
+	content:"";
+	clear:both;
+}
+
+.groups {}
+
+.groupBreaker {
+	page-break-after:always;
+}
+
+.groupWrapper {
+	min-width:180px;
+	max-width:210px;
+}
+
+.groupTitle {
+	margin:0;padding:0;
+	opacity:.5;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.groupInfo {
+	opacity:.5;
+	font-size:7pt;
+}
+
+.groupLinks {}
+
+.singleMode {
+	display:block;
+}
+
+.linkPair {
+	white-space:nowrap;
+}
+
+.linkPair a,
+.linkPair .label {
+	display:block;
+	overflow:visible;
+	color:var(--link-color);
+	padding:2px 7px;
+	line-height:1.6em;
+}
+.linkPair:hover {
+	background:var(--link-parent-hover);
+}
+.linkPair a {
+	background:var(--link-bg);
+}
+.linkPair:hover .label {
+	color:#ff0;
+}
+.linkPair a {
+	box-shadow: var(--link-bg-shadow);
+	border-radius:4px;
+}
+.linkPair.subLinks {
+	display:flex;
+	gap:1px;
+}
+.linkPair.subLinks a {
+	text-align:center;
+	/*min-width:3.2em;*/
+}
+.linkPair.subLinks *:first-child{
+	text-align:left;
+	flex-grow:1;
+}
+.linkPair a:hover {
+	box-shadow:var(--link-bg-shadow-hover);
+	background:var(--link-bg-hover);
+	color:var(--link-color-hover);
+}
+
+/*
+.groupsWrapper [flex] max-height column wrap
+	.groups
+		.groupWrapper
+			.groupTitle
+			.groupLinks [flex]
+				.linkPair
+					a
+*/
+
+#searchlist {}
+#searchlist > form {}
+.searchbox {
+	position:relative;
+	margin:0; padding:0;
+	margin-top:.75em;
+}
+.searchbox > * {
+	width:100%;
+	height:20px;
+	line-height:20px;
+	margin:0;
+	border-radius: 4px;
+	padding:0 .6em;
+}
+.searchbox > div {
+	text-align:right;
+	background: var(--search-bg);
+	box-shadow: var(--search-shadow);
+	color:var(--search-color);
+}
+.searchbox > input {
+	position: absolute;
+	top:0;left:0;/*right:0;bottom:0;*/
+	border:none;
+	background:none;
+	outline-style:none!important;
+	color:#ccc;
+}
+.searchbox > input:focus {
+	background: var(--search-focus-bg);
+	box-shadow: var(--search-focus-shadow);
+}
+.searchbox.red > input:focus {
+	background:rgba(255,0,0,.2);
+}
+
+

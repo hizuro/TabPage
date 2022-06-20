@@ -1,0 +1,16 @@
+[
+	["Google","https://www.google.com/search?q="],
+	["php.net","https://php.net/manual-lookup.php?scope=quickref&pattern="],
+	["WoWHead","https://www.wowhead.com/search?q=","wowhead"],
+	["WoWpedia","https://wowpedia.fandom.com/wiki/Special:Search?go=Go&search="],
+	["Curseforge","https://www.curseforge.com/wow/addons/search?search="],
+	["(item) WoWHead","https://www.wowhead.com/?item=","red"],
+	["(quest) WoWHead","https://www.wowhead.com/?quest=","red"],
+	["(spell) WoWHead","https://www.wowhead.com/?spell=","red"],
+	["(npc) WoWHead","https://www.wowhead.com/?npc=","red"],
+	["(obj) WoWHead","https://www.wowhead.com/?object=","red"],
+	["(follower) WoWHead","https://www.wowhead.com/?follower=","red"],
+	["(achievement) WoWHead","https://www.wowhead.com/?achievement=","red"],
+	["(currency) WoWHead","https://www.wowhead.com/?currency=","red"],
+	["(faction) WoWHead","https://www.wowhead.com/?faction=","red"]
+]
